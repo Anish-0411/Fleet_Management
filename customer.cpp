@@ -3,8 +3,8 @@
 #include <sstream>
 #include <string>
 #include <algorithm>
-#include </Users/saianish/Desktop/2-1/C++/Project/admin.cpp>
 #include<cctype>
+#include </Users/saianish/Desktop/2-1/C++/Project/admin.cpp>
 using namespace std;
 extern map<string, vector<pair<string, int> > > graph;
 
@@ -148,52 +148,6 @@ bool isValidDate(const string& date) {
 
     return true;
 }
-
-// void bookFleet(const Customer& loggedInCustomer) {
-//     if (loggedInCustomer.c_name.empty()) {
-//         cout << "You need to log in to book a fleet." << endl;
-//         return;
-//     }
-    
-//     string fromPlace, destination, fromDate, toDate, vehicleType;
-    
-//     cout << "Enter from place: ";
-//     cin >> fromPlace;
-
-
-//     cout << "Enter destination: ";
-//     cin >> destination;
-
-
-//     do {
-//         cout << "Enter from date (dd/mm/yyyy): ";
-//         cin >> fromDate;
-//     } while (!isValidDate(fromDate));
-
-//     do {
-//         cout << "Enter to date (dd/mm/yyyy): ";
-//         cin >> toDate;
-//     } while (!isValidDate(toDate));
-
-//     // Present the updated vehicle options
-//     cout << "Choose vehicle type (Trailer, Truck Tanker): ";
-//     cin >> vehicleType;
-
-
-    
-//     ofstream file(bookingFile, ios::app);
-//     if (file) {
-//         // Save all booking details in the correct order
-//         file << loggedInCustomer.c_name << "," << fromPlace << "," << destination << "," 
-//              << fromDate << "," << toDate << "," << vehicleType << endl;
-//         file.close();
-//         cout << "Booking successful!" << endl;
-//         // cout << "Path from " << fromPlace << " to " << destination << ":" << endl;
-//         // dijkstra(graph, fromPlace, destination);  
-//     } else {
-//         cerr << "Error opening file!" << endl;
-//     }
-// }
 
 void bookFleet(const Customer& loggedInCustomer) {
     if (loggedInCustomer.c_name.empty()) {

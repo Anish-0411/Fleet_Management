@@ -18,3 +18,9 @@ Danny,mumbai,delhi,10/11/2024,11/11/2024,Tanker
 Danny,mumbai,chennai,10/11/2024,11/11/2024,Truck
 Danny,mumbai,chennai,12/11/2024,12/11/2024,Tanker
 Danny,mumbai,chennai,12/11/2024,12/12/2024,Tanker
+Ashish,RJY,GTR,13/11/2024,14/11/2024,Trailer
+Anish,banglore,kolkata,16/11/2024,20/11/2024,Tanker
+Danny,chennai,delhi,10/11/2024,13/11/2024,Tanker
+Danny,banglore,pune,10/11/2024,12/11/2024,Truck
+Danny,banglore,jaipur,12/11/2024,13/11/2024,Trailer
+Danny,banglore,chennai,10/11/2024,11/11/2024,Truck

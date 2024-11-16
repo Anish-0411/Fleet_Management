@@ -6,8 +6,6 @@
 
 #include <unistd.h>
 
-
-
 using namespace std;
 int main(){
     char cwd[PATH_MAX];
