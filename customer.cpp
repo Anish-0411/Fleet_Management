@@ -5,6 +5,11 @@
 #include <algorithm>
 #include<cctype>
 #include </Users/saianish/Desktop/2-1/C++/Project/admin.cpp>
+#include <thread>
+#include <chrono>
+#include </Users/saianish/Desktop/2-1/C++/Project/gps_test.cpp>
+
+
 using namespace std;
 extern map<string, vector<pair<string, int> > > graph;
 
@@ -191,6 +196,15 @@ void bookFleet(const Customer& loggedInCustomer) {
     }
 }
 
+void location(){
+    const string filename = "gps_data.txt";
+
+    // while (true) {
+        readLocationFromFile(filename);
+    //     this_thread::sleep_for(chrono::seconds(1));
+    // }
+}
+
 void viewPastBookings(const Customer& loggedInCustomer) {
     ifstream file(bookingFile);
     string line;
@@ -228,30 +242,6 @@ void viewPastBookings(const Customer& loggedInCustomer) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 void displayCustomerMenu(Customer& loggedInCustomer) {
     int choice;
     do {
@@ -259,7 +249,8 @@ void displayCustomerMenu(Customer& loggedInCustomer) {
         cout << "1. View Customer Details\n";
         cout << "2. Book Fleet\n";
         cout << "3. View Past Bookings\n";
-        cout << "4. Logout\n";
+        cout << "4. Know Your Fleet Loaction\n";
+        cout << "5. Logout\n";
         cout << "Enter your choice: ";
         cin >> choice;
 
@@ -274,6 +265,9 @@ void displayCustomerMenu(Customer& loggedInCustomer) {
                 viewPastBookings(loggedInCustomer);
                 break;
             case 4:
+                location();
+                break;
+            case 5:
                 cout << "Logging out...\n";
                 loggedInCustomer.c_name.clear();
                 break;
@@ -281,7 +275,7 @@ void displayCustomerMenu(Customer& loggedInCustomer) {
                 cout << "Invalid choice! Please try again.\n";
                 break;
         }
-    } while (choice != 4);
+    } while (choice != 5);
 }
 
 void mainMenu() {

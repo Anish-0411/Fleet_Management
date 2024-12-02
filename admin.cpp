@@ -87,9 +87,9 @@ void addRoute(map<string, vector<pair<string, int> > >& graph, const string& cit
 
 void displayGraph(const map<string, vector<pair<string, int> > >& graph) {
     for (const auto& city : graph) {
-        cout << city.first << ": ";
+        cout << city.first << " to ";
         for (const auto& neighbor : city.second) {
-            cout << "(" << neighbor.first << ", " << neighbor.second << " kilometers) ";
+            cout << "(" << neighbor.first << ", " << neighbor.second << " kilometers) "<<endl;
         }
         cout << endl;
     }
